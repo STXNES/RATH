@@ -1,0 +1,96 @@
+.section {
+  position: relative;
+  background: var(--bg-secondary);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.splitLayout {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.pane {
+  flex: 1;
+  min-width: 300px;
+  padding: 8rem 5%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pane:first-child {
+  border-right: 1px solid rgba(255, 255, 255, 0.05);
+  background: radial-gradient(circle at right center, rgba(0, 240, 255, 0.03) 0%, transparent 50%);
+}
+
+.pane:last-child {
+  background: radial-gradient(circle at left center, rgba(138, 43, 226, 0.03) 0%, transparent 50%);
+}
+
+.content {
+  max-width: 500px;
+}
+
+.iconWrapper {
+  margin-bottom: 2rem;
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.pulseMission, .pulseVision {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  position: relative;
+}
+
+.pulseMission {
+  background: var(--accent-cyan);
+  box-shadow: 0 0 20px var(--accent-cyan);
+}
+
+.pulseVision {
+  background: var(--accent-purple);
+  box-shadow: 0 0 20px var(--accent-purple);
+}
+
+.pulseMission::after, .pulseVision::after {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  border-radius: 50%;
+  animation: ripple 2s infinite ease-out;
+}
+
+.pulseMission::after { border: 1px solid var(--accent-cyan); }
+.pulseVision::after { border: 1px solid var(--accent-purple); }
+
+@keyframes ripple {
+  0% { transform: scale(0.5); opacity: 1; }
+  100% { transform: scale(2); opacity: 0; }
+}
+
+.title {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--text-primary);
+}
+
+.text {
+  font-size: 1.15rem;
+  color: var(--text-secondary);
+  line-height: 1.8;
+}
+
+@media (max-width: 768px) {
+  .pane:first-child {
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  }
+}

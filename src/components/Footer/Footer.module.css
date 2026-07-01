@@ -1,0 +1,95 @@
+.footer {
+  background: #050505;
+  padding: 6rem 5% 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 4rem;
+  margin-bottom: 4rem;
+}
+
+.brandInfo {
+  max-width: 300px;
+}
+
+.brand {
+  font-size: 2rem;
+  letter-spacing: 0.2em;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.slogan {
+  color: var(--text-secondary);
+  font-size: 1rem;
+}
+
+.links {
+  display: flex;
+  gap: 4rem;
+  flex-wrap: wrap;
+}
+
+.column h4 {
+  color: var(--text-primary);
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+}
+
+.column a {
+  display: block;
+  color: var(--text-secondary);
+  text-decoration: none;
+  margin-bottom: 0.8rem;
+  transition: color 0.3s ease;
+}
+
+.column a:hover {
+  color: var(--accent-cyan);
+}
+
+.socialIcons {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.socialIcons a {
+  font-size: 1.5rem;
+}
+
+.bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.legal a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  margin-left: 2rem;
+  transition: color 0.3s ease;
+}
+
+.legal a:hover {
+  color: var(--text-primary);
+}
+
+@media (max-width: 768px) {
+  .top {
+    flex-direction: column;
+  }
+}
